@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 45% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 93% 36%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 42 75% 60%;
+    --accent-foreground: 217 93% 36%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 90%;
+    --input: 214 32% 90%;
+    --ring: 222 84% 18%;
+
+    --radius: 0.5rem;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+  
+  .container-custom {
+    @apply container mx-auto max-w-7xl;
+  }
+  
+  .btn-primary {
+    @apply bg-construction-600 text-white py-3 px-6 rounded-md hover:bg-construction-700 
+    transition-all duration-300 font-semibold shadow-button hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-accent1 text-construction-900 py-3 px-6 rounded-md hover:bg-amber-500 
+    transition-all duration-300 font-semibold shadow-md hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-construction-600 text-construction-600 py-3 px-6 rounded-md 
+    hover:bg-construction-600 hover:text-white transition-all duration-300 font-semibold;
+  }
+  
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+  
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  
+  .heading-sm {
+    @apply text-xl md:text-2xl font-bold;
+  }
+}
